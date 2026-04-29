@@ -7,6 +7,9 @@ music = {
     "skyfall":"https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbU5zajh3S3M1NzExeFZ2RFJZYlh0Q0tISGhOUXxBQ3Jtc0tuSndCOTVOcmE5R1JaVFlPZzlFZjF1MlJSdzljeU9QYVdCNEJBQ004UzgtMnNYZFJpSU9lVGZ6MnhaYVlOXzhfWmxaeWwzUGNONUwwd3dHSER5VnVEZ3gydHQ5NWREeThUakNmNHJpR2xkMmw5ZWRkNA&q=http%3A%2F%2Fsmarturl.it%2FAdeleSkyfall&v=DeumyOzKqgI",
     "prada":"https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqa0tXOG9ETzhoSk5UeTNnNmR1bjlRZHlwRWlPZ3xBQ3Jtc0ttdENKRURyV1g3T1JTMDJmX2k5US13NGV1dHVsczVZWm1Lek9lRjdnalA1SlVtTHZIWnlqbHR3dzI1SjU3cEtoUDNzV0k1T0hjT2hzdWVJTjhVSHlwTmJvZm5ad2EyX0gzaU5sMjBveTdjcXlxV2N0TQ&q=http%3A%2F%2Fbit.ly%2FSubscribeGEETMP3&v=PjTU0DmBWiU",
     "psycho":"https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbThDd1F4dEczeENJZWgybE15QWNqYm00TDhEQXxBQ3Jtc0trWi1EbGEyQ2F4U2RjajNfbU5VdVhRN2QycDhWZ3dRd0RPLWVuQThHdjBVTDlMbE1KZ05MNlpyN01JTlI0Y2lyM0R0WFcwTUNQemdYeEt3OGxOOWRwOHZyVlBvUE5KclF1cjcyTk5oRk9fUzBVXzJuNA&q=https%3A%2F%2FPostMalone.lnk.to%2FpsychoYD&v=au2n7VVGv_c",
-    "namo namo":"https://youtu.be/dx4Teh-nv3A?si=H2tGw02-OaV4khGi"
+    "namo namo":"https://youtu.be/dx4Teh-nv3A?si=H2tGw02-OaV4khGi",
+    "believer": "https://www.youtube.com/watch?v=7wtfhZwyrcc",
+    "shape of you": "https://www.youtube.com/watch?v=JGwWNGJdvx8",
+    "faded": "https://www.youtube.com/watch?v=60ItHLz5WEA",
 
 }

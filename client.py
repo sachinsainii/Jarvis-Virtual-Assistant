@@ -1,7 +1,5 @@
 from openai import OpenAI
-client = OpenAI(
-    api_key = "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"
-)
+client = OpenAI(api_key = os.getenv("OPENAI_API_KEY"))
 completion = client.chat.completions.create(
     model = "gpt-3.5-turbo",
     messages=[
@@ -12,4 +10,4 @@ completion = client.chat.completions.create(
 print(completion.choices[0].message.content)
 
 
-#pip install openai
+# #pip install openai
