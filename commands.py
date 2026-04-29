@@ -3,6 +3,8 @@ import requests
 from speech import speak
 import musicLibrary
 from config import NEWS_API_KEY
+from client import ask_ai
+from memory import remember, recall
 
 
 commands = {
@@ -40,29 +42,61 @@ def get_news():
         data = response.json()
 
         articles = data.get("articles", [])
-
         if not articles:
-            speak("No news available")
-            return
+            return "No news available"
 
-        for i, article in enumerate(articles[:5]):
-            speak(article["title"])
+        headlines = []
+        for article in articles[:5]:
+            headlines.append(article["title"])
 
-    except Exception as e:
-        speak("Error fetching news")
+        return "\n".join(headlines)
 
+    except:
+        return "Error fetching news"
 
 def process_command(command):
     command = command.lower()
 
-    if open_website(command):
-        return
+    if "open google" in command:
+        webbrowser.open("https://google.com")
+        return "Opening Google"
+
+    elif "open youtube" in command:
+        webbrowser.open("https://youtube.com")
+        return "Opening YouTube"
 
     elif command.startswith("play"):
-        play_music(command)
+        song = command.replace("play", "").strip()
+        if song in musicLibrary.music:
+            webbrowser.open(musicLibrary.music[song])
+            return f"Playing {song}"
+        return "Song not found"
 
     elif "news" in command:
-        get_news()
+        return get_news()
 
+    elif "my name is" in command:
+        name = command.replace("my name is", "").strip()
+        remember("name", name)
+        return f"Nice to meet you, {name}"
+
+    elif "what is my name" in command:
+        name = recall("name")
+        if name:
+            return f"Your name is {name}"
+        return "I don't know your name yet"
+
+    elif "remember that" in command:
+        info = command.replace("remember that", "").strip()
+        remember("note", info)
+        return "I will remember that"
+
+    elif "what did i say" in command:
+        note = recall("note")
+        if note:
+            return f"You said: {note}"
+        return "I don't remember anything"
+
+    # AI fallback
     else:
-        speak("I didn't understand that command")
+        return ask_ai(command)

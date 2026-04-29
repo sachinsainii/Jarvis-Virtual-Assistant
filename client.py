@@ -1,13 +1,22 @@
 from openai import OpenAI
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
 client = OpenAI(api_key = os.getenv("OPENAI_API_KEY"))
-completion = client.chat.completions.create(
-    model = "gpt-3.5-turbo",
-    messages=[
-        {"role": "system", "content": "you are a virtual assistant named jarvis skilled in general task like alexa and Google Cloud"},
-        {"role": "user", "content": "what is coding"}
-    ]
-)
-print(completion.choices[0].message.content)
 
+def ask_ai(prompt):
+    try:
+        response = client.chat.completions.create(
+            model="gpt-4o-mini",
+            messages=[
+                {"role": "system", "content": "You are a helpful AI assistant like Jarvis."},
+                {"role": "user", "content": prompt}
+            ]
+        )
 
-# #pip install openai
+        return response.choices[0].message.content
+
+    except Exception:
+        return "Error connecting to AI"
